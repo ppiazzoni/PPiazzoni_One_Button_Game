@@ -5,9 +5,14 @@ public class Parry : MonoBehaviour
     public float parryDuration = 0.5f; // Duration of parry window
     public float parryCooldown = 1f; // Cooldown time before next parry can be initiated
 
+    private Collider playerCollider;
     private bool isParrying = false; // Flag to indicate if the player is currently parrying
     private float lastParryTime; // Time when the last parry was initiated
 
+    private void Awake()
+    {
+        playerCollider = this.GetComponent<Collider>();
+    }
     void Update()
     {
         // Check for user input to toggle parry
@@ -31,6 +36,7 @@ public class Parry : MonoBehaviour
 
     void StartParry()
     {
+        playerCollider.isTrigger = false;
         isParrying = true;
         lastParryTime = Time.time;
 

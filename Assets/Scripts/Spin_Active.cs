@@ -1,21 +1,21 @@
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class Spin_Active : MonoBehaviour
 {
-    public Animation anim; // Reference to your animation component
     public KeyCode keyToPress = KeyCode.Space; // Keybind to trigger the animation
 
+    private Animator anim; // Reference to your animation component
+
+    private void Awake()
+    {
+        anim = this.GetComponent<Animator>();
+    }
     void Update()
     {
         // Check if the key is pressed
         if (Input.GetKeyDown(keyToPress))
         {
-            // Check if the animation is not already playing to prevent interruption
-            if (!anim.isPlaying)
-            {
-                // Trigger the animation
-                anim.Play();
-            }
+            anim.SetTrigger("parry");
         }
     }
 }

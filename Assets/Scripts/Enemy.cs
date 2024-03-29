@@ -44,8 +44,6 @@ public class Enemy : MonoBehaviour
     // Method to be called when the projectile collides with something
     public void OnProjectileCollision()
     {
-        // Perform any necessary actions when the projectile collides with something
-        // For example, destroy the projectile
         Destroy(gameObject);
     }
 }
