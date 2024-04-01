@@ -49,6 +49,7 @@ public class Parry : MonoBehaviour
     void EndParry()
     {
         isParrying = false;
+        playerCollider.isTrigger = true;
 
         // Disable the visual or audio feedback for parry
     }
