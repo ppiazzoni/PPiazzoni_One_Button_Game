@@ -30,7 +30,7 @@ public class Parry : MonoBehaviour
         }
         else
         {
-            EndParry();
+            EndParry();/////
         }
     }
 
@@ -39,6 +39,7 @@ public class Parry : MonoBehaviour
         playerCollider.isTrigger = false;
         isParrying = true;
         lastParryTime = Time.time;
+        
 
         // Enable some visual or audio feedback to indicate the player is parrying
 
@@ -61,6 +62,7 @@ public class Parry : MonoBehaviour
         {
             // Handle successful parry
             Debug.Log("Parry successful!");
+            ParryEventManager.Parry();
 
             // You can add more logic here, like stunning the enemy or dealing damage to them
         }
