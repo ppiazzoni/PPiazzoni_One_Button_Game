@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 2, z: -5.35}
+  m_LocalPosition: {x: 4.5, y: 2, z: -4.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1069490389}
   - component: {fileID: 1069490388}
   m_Layer: 0
-  m_Name: Ground (1)
+  m_Name: Background_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7995684997151334677, guid: c364f93dea09c7346bde06df0aa07186,
     type: 3}
   projectileSpeed: 25
-  launchInterval: 3
+  launchInterval: 1.5
 --- !u!1 &1472114594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,7 +5853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c841f85b3d9314591bda10656f15cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parryDuration: 0.5
+  parryDuration: 0.3
   parryCooldown: 1
 --- !u!95 &1835474525
 Animator:

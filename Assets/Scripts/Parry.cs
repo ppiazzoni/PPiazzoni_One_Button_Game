@@ -36,7 +36,7 @@ public class Parry : MonoBehaviour
 
     void StartParry()
     {
-        playerCollider.isTrigger = false;
+        playerCollider.isTrigger = true;
         isParrying = true;
         lastParryTime = Time.time;
         
