@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 173872295}
   - component: {fileID: 173872294}
   m_Layer: 0
-  m_Name: damageeffect
+  m_Name: DamageEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
