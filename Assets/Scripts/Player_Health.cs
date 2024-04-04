@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     // Variable that keeps track of Player's Health
     public int health;
+    public GameObject deathScreen;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class PlayerHealth : MonoBehaviour
         // If Player's health reaches ZERO Player is DEFEATED
         if (health <= 0)
         {
-            LoadSceneMode? Losingscreen;
+            //LoadSceneMode? Losingscreen;
+            deathScreen.SetActive(true);
         }
     }
 

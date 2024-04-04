@@ -32,8 +32,10 @@ public class Enemy : MonoBehaviour
         // Calculate the direction towards the player
         Vector3 direction = (player.position - transform.position).normalized;
 
+        Quaternion originalRotation = Quaternion.Euler(90f, 270f, 0f);
+
         // Instantiate the projectile prefab
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, transform.position, originalRotation);
 
         // Set the velocity of the projectile
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
@@ -46,7 +48,7 @@ public class Enemy : MonoBehaviour
     IEnumerator LaunchIntervalRandomizer()
     {
         yield return new WaitForSeconds(2f);
-        launchInterval = Random.Range(1f, 2f);
+        launchInterval = Random.Range(0.5f,2f);
         StartCoroutine(LaunchIntervalRandomizer());
     }
 
