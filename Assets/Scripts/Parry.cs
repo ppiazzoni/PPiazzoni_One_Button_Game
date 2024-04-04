@@ -8,9 +8,10 @@ public class Parry : MonoBehaviour
     private Collider playerCollider;
     private bool isParrying = false; // Flag to indicate if the player is currently parrying
     private float lastParryTime; // Time when the last parry was initiated
-
+    private PlayerHealth healthScript;
     private void Awake()
     {
+        healthScript = this.GetComponent<PlayerHealth>();
         playerCollider = this.GetComponent<Collider>();
     }
     void Update()
@@ -70,6 +71,7 @@ public class Parry : MonoBehaviour
         {
             // Handle player getting hit by enemy attack
             Debug.Log("Player got hit!");
+            healthScript.TakeDamage(1);
         }
     }
 }

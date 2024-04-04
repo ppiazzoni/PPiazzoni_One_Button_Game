@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         // If Player's health reaches ZERO Player is DEFEATED
         if (health <= 0)
         {
-            Destroy(gameObject);
+            LoadSceneMode? Losingscreen;
         }
     }
 

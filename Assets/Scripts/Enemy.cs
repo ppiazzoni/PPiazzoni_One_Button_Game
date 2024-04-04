@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     {
         // Find the player GameObject and get its transform
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        StartCoroutine(LaunchIntervalRandomizer());
     }
 
     void Update()
@@ -39,6 +41,13 @@ public class Enemy : MonoBehaviour
         {
             rb.velocity = direction * projectileSpeed;
         }
+    }
+
+    IEnumerator LaunchIntervalRandomizer()
+    {
+        yield return new WaitForSeconds(2f);
+        launchInterval = Random.Range(1f, 2f);
+        StartCoroutine(LaunchIntervalRandomizer());
     }
 
     // Method to be called when the projectile collides with something
